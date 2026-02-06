@@ -73,7 +73,13 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 | **Answer Correctness** | **0.49** 🟢 | 0.27 🔴 |
 
 ---
-
+graph TD
+    A[User Query] --> B[Retriever: Baseline / Hybrid]
+    B --> C[Reranker: optional]
+    C --> D[Context Builder]
+    D --> E[LLM: Answer Generation]
+    E --> F[Answer + Retrieved Context]
+    F --> G[RAGAS Evaluation]
 ## Key Findings
 
 ### What Worked
