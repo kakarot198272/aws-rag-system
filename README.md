@@ -7,7 +7,7 @@ Unlike typical RAG demos, this system emphasizes **measurement, failure analysis
 
 ---
 
-## 🛑 Problem Statement
+## Problem Statement
 Large Language Models (LLMs) often hallucinate when responses are not strongly grounded in retrieved context. The objective of this project was to:
 * **Build** an end-to-end RAG pipeline.
 * **Compare** baseline dense retrieval vs. hybrid + reranked retrieval.
@@ -16,7 +16,7 @@ Large Language Models (LLMs) often hallucinate when responses are not strongly g
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 
 
@@ -31,21 +31,21 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 
 ---
 
-## 🔍 Retrieval Strategies Implemented
+## Retrieval Strategies Implemented
 
-### 1️⃣ Baseline RAG
+### Baseline RAG
 * **Dense vector retrieval** using semantic embeddings.
 * **Deterministic prompting** to minimize variance and hallucinations.
 * **Compact context**: High-signal context filtering for grounding.
 
-### 2️⃣ Hybrid + Rerank RAG
+### Hybrid + Rerank RAG
 * **Hybrid retrieval**: Combines semantic (Vector) and lexical (Keyword/BM25) signals.
 * **Cross-Encoder Reranking**: Re-evaluates document relevance for better precision.
 * **Increased Width**: Retrieves 20 chunks before pruning to the top 8.
 
 ---
 
-## 📊 Evaluation Methodology
+## Evaluation Methodology
 
 ### Dataset
 * **40 curated question–answer pairs.**
@@ -63,7 +63,7 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 
 ---
 
-## 📈 Results
+## Results
 
 | Metric | Baseline RAG | Hybrid + Rerank RAG |
 | :--- | :--- | :--- |
@@ -74,14 +74,14 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 
 ---
 
-## 💡 Key Findings
+## Key Findings
 
-### ✅ What Worked
+### What Worked
 * **Simpler retrieval pipelines** produced significantly higher answer correctness.
 * **Deterministic prompts** effectively forced the model to admit when information was missing.
 * **Smaller contexts** prevented "lost in the middle" phenomena during generation.
 
-### ❌ Why Hybrid + Rerank Underperformed
+### Why Hybrid + Rerank Underperformed
 * **Context Dilution**: Larger retrieval sets introduced irrelevant data that distracted the LLM.
 * **Reranker misalignment**: The reranker optimized for document relevance, but not necessarily for "answerability."
 * **Conflicting Contexts**: Increased noise led to a drop in Faithfulness as the LLM tried to reconcile irrelevant snippets.
@@ -90,7 +90,7 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 
 ---
 
-## 🛠 How to Run
+## How to Run
 
 ### Setup
 ```bash
