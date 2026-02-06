@@ -74,12 +74,18 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 
 ---
 graph TD
-    A[User Query] --> B[Retriever: Baseline / Hybrid]
-    B --> C[Reranker: optional]
-    C --> D[Context Builder]
-    D --> E[LLM: Answer Generation]
-    E --> F[Answer + Retrieved Context]
-    F --> G[RAGAS Evaluation]
+    A[User Query] --> B{Retriever}
+    B -- Baseline --> C[Vector Search]
+    B -- Hybrid --> D[Vector + BM25]
+    C --> E[Reranker]
+    D --> E[Reranker]
+    E --> F[Context Builder]
+    F --> G[LLM: Answer Generation]
+    G --> H[Final Answer + Context]
+    H --> I[RAGAS Evaluation]
+    
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style I fill:#bbf,stroke:#333,stroke-width:2px
 ## Key Findings
 
 ### What Worked
