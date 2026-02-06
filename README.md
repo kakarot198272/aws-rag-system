@@ -73,19 +73,7 @@ The system follows a modular flow to allow for A/B testing of different retrieva
 | **Answer Correctness** | **0.49** 🟢 | 0.27 🔴 |
 
 ---
-graph TD
-    A[User Query] --> B{Retriever}
-    B -- Baseline --> C[Vector Search]
-    B -- Hybrid --> D[Vector + BM25]
-    C --> E[Reranker]
-    D --> E[Reranker]
-    E --> F[Context Builder]
-    F --> G[LLM: Answer Generation]
-    G --> H[Final Answer + Context]
-    H --> I[RAGAS Evaluation]
 
-    style B fill:#f9f,stroke:#333,stroke-width:2px
-    style I fill:#bbf,stroke:#333,stroke-width:2px
 
 ### What Worked
 * **Simpler retrieval pipelines** produced significantly higher answer correctness.
