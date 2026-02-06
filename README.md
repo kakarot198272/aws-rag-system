@@ -18,7 +18,7 @@ Large Language Models (LLMs) often hallucinate when responses are not strongly g
 
 ## System Architecture
 
-
+![RAG System Architecture](./rag_flowchart.png)
 
 The system follows a modular flow to allow for A/B testing of different retrieval and reranking strategies:
 
