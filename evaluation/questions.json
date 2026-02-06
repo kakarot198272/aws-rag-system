@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the primary purpose of Amazon S3?",
+    "ground_truth": "Amazon S3 is an object storage service used to store and retrieve data at any scale."
+  },
+  {
+    "question": "How does AWS IAM help secure cloud resources?",
+    "ground_truth": "AWS IAM controls access to AWS resources by defining users, roles, and permissions."
+  },
+  {
+    "question": "What is the difference between EC2 and Lambda?",
+    "ground_truth": "EC2 provides virtual servers you manage, while Lambda runs code without managing servers."
+  },
+  {
+    "question": "What is an AWS VPC used for?",
+    "ground_truth": "An AWS VPC provides an isolated virtual network for launching AWS resources."
+  },
+  {
+    "question": "What problem does AWS Auto Scaling solve?",
+    "ground_truth": "AWS Auto Scaling automatically adjusts compute capacity to maintain performance and reduce cost."
+  },
+  {
+    "question": "Why would you use an IAM role instead of access keys?",
+    "ground_truth": "IAM roles provide temporary credentials and avoid long-term credential exposure."
+  },
+  {
+    "question": "What is the purpose of an S3 bucket policy?",
+    "ground_truth": "An S3 bucket policy defines access permissions for objects stored in a bucket."
+  },
+  {
+    "question": "How does AWS Lambda scale automatically?",
+    "ground_truth": "AWS Lambda automatically scales by running multiple instances of a function in response to events."
+  },
+  {
+    "question": "What is the main benefit of using managed services in AWS?",
+    "ground_truth": "Managed services reduce operational overhead by handling infrastructure management automatically."
+  },
+  {
+    "question": "What does high availability mean in AWS architecture?",
+    "ground_truth": "High availability means designing systems to remain operational despite failures using redundancy."
+  }
+]

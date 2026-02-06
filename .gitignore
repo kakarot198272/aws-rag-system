@@ -1,0 +1,20 @@
+# Python virtual environments
+.venv/
+.venv310/
+venv/
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Vector DB / model artifacts
+data/
+chroma/
+*.faiss
+*.index
+huggingface/
+
+# OS files
+.DS_Store
+
