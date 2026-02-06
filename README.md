@@ -104,3 +104,9 @@ pip install -r requirements.txt
 # Set API Key (Required for RAGAS judge)
 export OPENAI_API_KEY='your_key_here'
 export TOKENIZERS_PARALLELISM=false
+
+# Run Baseline Evaluation
+python evaluation/eval_baseline.py
+
+# Run Hybrid + Rerank Evaluation
+python evaluation/eval_hybrid_rerank.py
